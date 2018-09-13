@@ -10,11 +10,11 @@ foodApp.controller('WelcomeController', function () {
     let self = this
 
     self.foods = foods;
-    self.inputFood = ''
-    self.foodRating = ''
-    self.ready = function () {
+    self.inputFood = '';
+    self.foodRating = '';
+    self.ready = function (food, rating) {
 
-        foods.push()
+        foods.push({name: food , deliciousness: rating})
         console.log('angular is ready', foods);
     }
 })
