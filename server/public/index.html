@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="angular.min.js"></script>
+    <script src="client.js"></script>
+    <title>Food Application</title>
+</head>
+
+<body ng-app="FoodApp">
+    <h1>Food Application</h1>
+    <div ng-controller="WelcomeController as vm">
+        <input ng-model="vm.inputFood" type="text" placeholder="Grocery Item">
+        <input ng-model="vm.foodRating" type="text" placeholder="How good is it?">
+        <button ng-click="vm.ready(vm.inputFood, vm.foodRating)">You Must Click This</button>
+
+
+        <ul>
+            <li ng-repeat="food in vm.foods">The grocery item {{food.name}} has a deliciousness value of
+                {{food.deliciousness}}!</li>
+        </ul>
+
+    </div>
+
+</body>
+
+</html>
